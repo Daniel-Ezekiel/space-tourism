@@ -66,11 +66,11 @@ export default {
       "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
 
       "technology-desktop":
-        "url('/src/assets/technology/background-technology-desktop.jpg')",
+        "url('/assets/technology/background-technology-desktop.jpg')",
       "technology-tablet":
-        "url('/src/assets/technology/background-technology-tablet.jpg')",
+        "url('/assets/technology/background-technology-tablet.jpg')",
       "technology-mobile":
-        "url('/src/assets/technology/background-technology-mobile.jpg')",
+        "url('/assets/technology/background-technology-mobile.jpg')",
     },
 
     screens: {
