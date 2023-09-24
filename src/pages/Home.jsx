@@ -1,7 +1,7 @@
 import Header from "../components/Header";
-import bgDesktop from "../assets/home/background-home-desktop.jpg";
-import bgTablet from "../assets/home/background-home-tablet.jpg";
-import bgMobile from "/src/assets/home/background-home-mobile.jpg";
+import bgDesktop from "/assets/home/background-home-desktop.jpg";
+import bgTablet from "/assets/home/background-home-tablet.jpg";
+import bgMobile from "/assets/home/background-home-mobile.jpg";
 
 const Home = () => {
   return (

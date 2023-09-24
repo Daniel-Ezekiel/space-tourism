@@ -1,7 +1,7 @@
 import Header from "../components/Header";
-import bgDesktop from "../assets/technology/background-technology-desktop.jpg";
-import bgTablet from "../assets/technology/background-technology-tablet.jpg";
-import bgMobile from "/src/assets/technology/background-technology-mobile.jpg";
+import bgDesktop from "/assets/technology/background-technology-desktop.jpg";
+import bgTablet from "/assets/technology/background-technology-tablet.jpg";
+import bgMobile from "/assets/technology/background-technology-mobile.jpg";
 
 const Technology = () => {
   return (

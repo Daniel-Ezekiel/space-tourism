@@ -50,20 +50,20 @@ export default {
     },
 
     backgroundImage: {
-      "home-desktop": "url('/src/assets/home/background-home-desktop.jpg')",
-      "home-tablet": "url('/src/assets/home/background-home-tablet.jpg')",
-      "home-mobile": "url('/src/assets/home/background-home-mobile.jpg')",
+      "home-desktop": "url('/assets/home/background-home-desktop.jpg')",
+      "home-tablet": "url('/assets/home/background-home-tablet.jpg')",
+      "home-mobile": "url('/assets/home/background-home-mobile.jpg')",
 
       "destination-desktop":
-        "url('/src/assets/destination/background-destination-desktop.jpg')",
+        "url('/assets/destination/background-destination-desktop.jpg')",
       "destination-tablet":
-        "url('/src/assets/destination/background-destination-tablet.jpg')",
+        "url('/assets/destination/background-destination-tablet.jpg')",
       "destination-mobile":
-        "url('/src/assets/destination/background-destination-mobile.jpg')",
+        "url('/assets/destination/background-destination-mobile.jpg')",
 
-      "crew-desktop": "url('/src/assets/crew/background-crew-desktop.jpg')",
-      "crew-tablet": "url('/src/assets/crew/background-crew-tablet.jpg')",
-      "crew-mobile": "url('/src/assets/crew/background-crew-mobile.jpg')",
+      "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
+      "crew-tablet": "url('/assets/crew/background-crew-tablet.jpg')",
+      "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
 
       "technology-desktop":
         "url('/src/assets/technology/background-technology-desktop.jpg')",

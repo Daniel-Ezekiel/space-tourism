@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Moon from "../assets/destination/image-moon.webp";
-import bgDesktop from "../assets/destination/background-destination-desktop.jpg";
-import bgTablet from "../assets/destination/background-destination-tablet.jpg";
-import bgMobile from "/src/assets/destination/background-destination-mobile.jpg";
+import { destinations } from "../data.json";
+import Moon from "/assets/destination/image-moon.webp";
+import bgDesktop from "/assets/destination/background-destination-desktop.jpg";
+import bgTablet from "/assets/destination/background-destination-tablet.jpg";
+import bgMobile from "/assets/destination/background-destination-mobile.jpg";
 
 const Destination = () => {
+  const [index, setIndex] = useState(0);
+  const currDestination = destinations[index];
+
+  const updateIndex = (event) => {
+    event.stopPropagation();
+    const targetIndex = event.target.closest("li").dataset.index;
+    setIndex(+targetIndex);
+  };
+
   return (
     <div className='min-h-[100vh] p-4 bg-destination-mobile bg-cover text-white md:bg-destination-tablet md:pt-[0] md:pr-[0] xl:bg-destination-desktop'>
       <Header />
@@ -14,34 +25,67 @@ const Destination = () => {
           Pick your destination
         </h1>
 
-        <img src={Moon} alt='moon' className='w-[17rem] h-[17rem] mx-auto' />
+        <img
+          src={currDestination.images.webp}
+          alt={currDestination.name}
+          className='w-[17rem] h-[17rem] mx-auto'
+        />
 
         <section className='w-[30rem] mx-auto grid gap-4'>
           <ul className='flex justify-center gap-4'>
-            <li className='py-2'>
+            <li
+              className={`py-2 ${
+                index == 0
+                  ? "border-b-2 border-b-blue"
+                  : "hover:border-b-2 hover:border-b-gray"
+              }`}
+              data-index='0'
+              onClick={updateIndex}
+            >
               <button className='text-sm uppercase text-blue'>Moon</button>
             </li>
-            <li className='py-2'>
+            <li
+              className={`py-2 ${
+                index == 1
+                  ? "border-b-2 border-b-blue"
+                  : "hover:border-b-2 hover:border-b-gray"
+              }`}
+              data-index='1'
+              onClick={updateIndex}
+            >
               <button className='text-sm uppercase text-blue'>Mars</button>
             </li>
-            <li className='py-2'>
+            <li
+              className={`py-2 ${
+                index == 2
+                  ? "border-b-2 border-b-blue"
+                  : "hover:border-b-2 hover:border-b-gray"
+              }`}
+              data-index='2'
+              onClick={updateIndex}
+            >
               <button className='text-sm uppercase text-blue'>Europa</button>
             </li>
-            <li className='py-2'>
+            <li
+              className={`py-2 ${
+                index == 3
+                  ? "border-b-2 border-b-blue"
+                  : "hover:border-b-2 hover:border-b-gray"
+              }`}
+              data-index='3'
+              onClick={updateIndex}
+            >
               <button className='text-sm uppercase text-blue'>Titan</button>
             </li>
           </ul>
 
           <div className='pb-6 border-b border-b-gray'>
             <h2 className='font-display uppercase text-center text-clamp'>
-              Moon
+              {currDestination.name}
             </h2>
 
             <p className='text-lg text-blue text-center'>
-              See our planet as you’ve never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you’re there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites.
+              {currDestination.description}
             </p>
           </div>
 
@@ -49,14 +93,18 @@ const Destination = () => {
             <h3 className='font-tagline text-blue text-sm uppercase text-center'>
               Avg. Distance
             </h3>
-            <span className='text-[2.8rem] uppercase'>384,400 km</span>
+            <span className='text-[2.8rem] uppercase'>
+              {currDestination.distance}
+            </span>
           </div>
 
           <div className='grid justify-center font-display'>
             <h3 className='font-tagline text-blue text-sm uppercase text-center'>
-              Wst. Travel Time
+              Est. Travel Time
             </h3>
-            <span className='text-[2.8rem] uppercase'>3 Days</span>
+            <span className='text-[2.8rem] uppercase'>
+              {currDestination.travel}
+            </span>
           </div>
         </section>
       </main>

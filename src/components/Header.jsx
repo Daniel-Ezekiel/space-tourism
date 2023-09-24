@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/shared/logo.svg";
-import menu from "../assets/shared/icon-hamburger.svg";
-import menuClose from "../assets/shared/icon-close.svg";
+import logo from "/assets/shared/logo.svg";
+import menu from "/assets/shared/icon-hamburger.svg";
+import menuClose from "/assets/shared/icon-close.svg";
 import NavbarLink from "./NavbarLink";
 
 const Header = () => {
