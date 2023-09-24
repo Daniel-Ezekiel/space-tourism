@@ -5,10 +5,7 @@ import bgMobile from "/src/assets/crew/background-crew-mobile.jpg";
 
 const Crew = () => {
   return (
-    <div
-      style={{ backgroundImage: `url('${bgMobile}')` }}
-      className='min-h-[100vh] p-4 bg-cover text-white md:pt-[0] md:pr-[0]'
-    >
+    <div className='min-h-[100vh] p-4 bg-crew-mobile bg-cover text-white md:bg-crew-tablet md:pt-[0] md:pr-[0] xl:bg-crew-desktop'>
       <Header />
       <main>Main Content</main>
     </div>
