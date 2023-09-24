@@ -29,7 +29,7 @@ const Header = () => {
         </Link>
 
         <ul
-          className='fixed bg-[rgba(255,255,255,0.04)] backdrop-blur-[4rem] top-[0] right-[-100vw] w-[60vw] h-full pt-[15rem] flex flex-col items-start gap-4 font-tagline text-lg md:static md:w-auto md:h-full md:pt-2 md:flex-row md:justify-between md:bg-[rgba(255,255,255,0.04)] md:p-[0] md:px-8 xl:pl-[10rem] xl:pr-[15rem] xl:relative  xl:right-[0] xl:before:h-[0.1rem] xl:before:absolute xl:before:top-[50%] xl:before:left-[-38vw] xl:before:w-[40vw] xl:before:bg-gray'
+          className='fixed bg-[rgba(255,255,255,0.04)] backdrop-blur-[4rem] top-[0] right-[-100vw] w-[60vw] h-full pt-[15rem] flex flex-col items-start gap-4 font-tagline text-lg md:static md:w-auto md:h-full md:pt-2 md:flex-row md:justify-between md:bg-[rgba(255,255,255,0.04)] md:p-[0] md:px-8 xl:pl-[10rem] xl:pr-[15rem] xl:relative  xl:right-[0] xl:before:h-[0.1rem] xl:before:absolute xl:before:top-[50%] xl:before:left-[-28vw] xl:before:w-[30vw] xl:before:bg-gray'
           ref={mobileMenuRef}
         >
           <NavbarLink path='/' count='00' title='Home' />

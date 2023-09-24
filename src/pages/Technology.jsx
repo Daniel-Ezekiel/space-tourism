@@ -7,7 +7,7 @@ const Technology = () => {
   return (
     <div
       style={{ backgroundImage: `url('${bgMobile}')` }}
-      className='min-h-[100vh] bg-cover text-white'
+      className='min-h-[100vh] p-4 bg-cover text-white md:pt-[0] md:pr-[0]'
     >
       <Header />
       <main>Main Content</main>
