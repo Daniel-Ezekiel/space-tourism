@@ -38,7 +38,8 @@ export default {
 
     fontFamily: {
       display: ["Bellefair", "serif"],
-      body: ["'Barlow Condensed'", "sans-serif"],
+      body: ["Barlow", "sans-serif"],
+      tagline: ["'Barlow Condensed'", "sans-serif"],
     },
 
     colors: {
