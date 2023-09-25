@@ -92,7 +92,7 @@ const Destination = () => {
               {currDestination.name}
             </h2>
 
-            <p className='text-lg text-blue text-[1.8rem]'>
+            <p className='text-lg text-blue xl:text-[1.8rem]'>
               {currDestination.description}
             </p>
           </div>
