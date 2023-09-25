@@ -18,23 +18,23 @@ const Crew = () => {
   console.log(crew);
 
   return (
-    <div className='min-h-[100vh] p-4 bg-crew-mobile bg-cover text-white md:bg-crew-tablet md:pt-[0] md:pr-[0] xl:bg-crew-desktop'>
+    <div className='min-h-[100vh] p-4 bg-crew-mobile bg-cover text-white md:bg-crew-tablet md:pt-[0] md:pr-[0] md:pb-[0] xl:bg-crew-desktop'>
       <Header />
-      <main className='py-4 grid gap-8 md:mt-10 md:px-6 xl:grid-cols-2 xl:w-[120rem] xl:mx-auto'>
+      <main className='py-4 grid gap-8 md:mt-10 md:px-6 md:pl-4 xl:grid-cols-2 md:pb-[0] xl:w-[120rem] xl:mx-auto'>
         <h1 className='font-tagline text-lg text-center text-white uppercase tracking-widest md:text-[2rem] md:text-left xl:text-[2.8rem]'>
           <span className='mr-2 font-bold text-gray'>02</span>
           Meet your crew
         </h1>
 
-        <div className='h-[28rem] border-b-[0.1rem] border-b-gray'>
+        <div className='h-[28rem] border-b-[0.1rem] border-b-gray md:border-b-[0] md:h-[50rem] md:mx-auto'>
           <img
             src={currCrewMember.images.webp}
             alt={currCrewMember.names}
-            className='w-[full] h-full object-cover mx-auto md:w-[30rem] md:h-[30rem] xl:col-start-1 xl:w-[45rem] xl:h-[45rem] xl:self-center'
+            className='w-full h-full object-contain mx-auto'
           />
         </div>
 
-        <section className='w-[30rem] mx-auto grid gap-5 md:w-[57.5rem] md:grid-cols-2 xl:col-start-2 xl:w-[45rem]'>
+        <section className='w-[30rem] mx-auto grid gap-5 md:w-[57.5rem] md:grid-cols-2 md:row-start-2 xl:col-start-2 xl:w-[45rem]'>
           <div className='flex justify-center gap-4 md:col-span-full xl:justify-start'>
             <button
               className={`w-2 h-2 rounded-full  ${
@@ -69,14 +69,14 @@ const Crew = () => {
             ></button>
           </div>
 
-          <div className='pb-6 grid gap-2 font-display uppercase text-center md:pb-10 md:col-span-full xl:text-start'>
-            <span className='text-lg text-gray xl:text-[1.8rem]'>
+          <div className='pb-6 grid gap-2 font-display uppercase text-center md:pb-10 md:w-[52rem] md:col-span-full md:row-start-[1] xl:text-start'>
+            <span className='text-lg text-gray md:text-xl'>
               {currCrewMember.role}
             </span>
 
-            <h2 className='text-xl'>{currCrewMember.name}</h2>
+            <h2 className='text-xl md:text-2xl'>{currCrewMember.name}</h2>
 
-            <p className='font-body text-base text-blue normal-case'>
+            <p className='font-body text-base text-blue normal-case md:text-lg'>
               {currCrewMember.bio}
             </p>
           </div>
