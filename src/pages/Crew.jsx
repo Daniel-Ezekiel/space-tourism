@@ -15,8 +15,6 @@ const Crew = () => {
     setIndex(+targetIndex);
   };
 
-  console.log(crew);
-
   return (
     <div className='min-h-[100vh] p-4 bg-crew-mobile bg-cover text-white md:bg-crew-tablet md:pt-[0] md:pr-[0] md:pb-[0] xl:bg-crew-desktop'>
       <Header />
