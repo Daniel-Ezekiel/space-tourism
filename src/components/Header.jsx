@@ -28,6 +28,17 @@ const logoFadeInVariant = {
   hidden: { opacity: 0, x: "-20rem" },
 };
 
+// const buttonFadeInVariant = {
+//   unhidden: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       delay: 0.25,
+//     },
+//   },
+//   hidden: { opacity: 0, x: "20rem" },
+// };
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
@@ -70,9 +81,9 @@ const Header = () => {
           <NavbarLink path='/technology' count='03' title='Technology' />
         </motion.ul>
 
-        <button className='z-10 md:hidden md:z-[0]' onClick={toggleNav}>
+        <motion.button className='z-10 md:hidden md:z-[0]' onClick={toggleNav}>
           <img src={!isMenuOpen ? menu : menuClose} alt='menu' />
-        </button>
+        </motion.button>
       </nav>
     </header>
   );

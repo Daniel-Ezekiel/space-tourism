@@ -1,9 +1,31 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
+import { motion } from "framer-motion";
 import { technology } from "../data.json";
+import Header from "../components/Header";
 import bgDesktop from "/assets/technology/background-technology-desktop.jpg";
 import bgTablet from "/assets/technology/background-technology-tablet.jpg";
 import bgMobile from "/assets/technology/background-technology-mobile.jpg";
+
+const leftFadeInVariant = {
+  unhidden: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.75,
+    },
+  },
+  hidden: { opacity: 0, x: "-15rem" },
+};
+const rightFadeInVariant = {
+  unhidden: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 1,
+    },
+  },
+  hidden: { opacity: 0, x: "15rem" },
+};
 
 const Technology = () => {
   const [index, setIndex] = useState(0);
@@ -30,13 +52,21 @@ const Technology = () => {
         <Header />
       </div>
       <main className='py-4 grid gap-8 md:mt-10 xl:grid-cols-2 md:pb-[0] xl:w-[120rem] xl:mx-auto xl:max-2xl:mr-[0]'>
-        <h1 className='font-tagline text-lg text-center text-white uppercase tracking-widest md:px-6 md:text-[2rem] md:text-left xl:col-span-full xl:text-[2.8rem]'>
+        <motion.h1
+          variants={leftFadeInVariant}
+          initial='hidden'
+          animate='unhidden'
+          className='font-tagline text-lg text-center text-white uppercase tracking-widest md:px-6 md:text-[2rem] md:text-left xl:col-span-full xl:text-[2.8rem]'
+        >
           <span className='mr-2 font-bold text-gray'>03</span>
           Space Launch 101
-        </h1>
+        </motion.h1>
 
         <div className='xl:col-start-2 xl:w-[52rem] xl:h-[53rem] xl:max-2xl:ml-auto'>
-          <img
+          <motion.img
+            variants={rightFadeInVariant}
+            initial='hidden'
+            animate='unhidden'
             src={
               windowWidth >= 1280
                 ? currTechInfo.images.portrait
@@ -47,7 +77,12 @@ const Technology = () => {
           />
         </div>
 
-        <section className='w-[30rem] mx-auto pb-10 grid gap-5 md:w-[51rem] xl:w-[fit-content] xl:col-start-1 xl:grid-cols-[9rem_1fr] xl:row-start-2 xl:self-center'>
+        <motion.section
+          variants={rightFadeInVariant}
+          initial='hidden'
+          animate='unhidden'
+          className='w-[30rem] mx-auto pb-10 grid gap-5 md:w-[51rem] xl:w-[fit-content] xl:col-start-1 xl:grid-cols-[9rem_1fr] xl:row-start-2 xl:self-center'
+        >
           <div className='flex justify-center gap-4 md:col-span-full xl:flex-col xl:col-span-1 xl:justify-start'>
             <button
               className={`w-8 h-8 rounded-full font-display text-lg md:w-[6rem] md:h-[6rem] md:text-xl xl:w-[8rem] xl:h-[8rem] xl:text-[3.2rem]  ${
@@ -99,7 +134,7 @@ const Technology = () => {
               {currTechInfo.description}
             </p>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );

@@ -1,10 +1,32 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
+import { motion } from "framer-motion";
 import { destinations } from "../data.json";
+import Header from "../components/Header";
 import Moon from "/assets/destination/image-moon.webp";
 import bgDesktop from "/assets/destination/background-destination-desktop.jpg";
 import bgTablet from "/assets/destination/background-destination-tablet.jpg";
 import bgMobile from "/assets/destination/background-destination-mobile.jpg";
+
+const leftFadeInVariant = {
+  unhidden: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.75,
+    },
+  },
+  hidden: { opacity: 0, x: "-15rem" },
+};
+const rightFadeInVariant = {
+  unhidden: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 1,
+    },
+  },
+  hidden: { opacity: 0, x: "15rem" },
+};
 
 const Destination = () => {
   const [index, setIndex] = useState(0);
@@ -20,18 +42,31 @@ const Destination = () => {
     <div className='min-h-[100vh] p-4 bg-destination-mobile bg-cover text-white md:bg-destination-tablet md:pt-[0] md:pr-[0] xl:bg-destination-desktop'>
       <Header />
       <main className='py-4 grid gap-5 md:mt-10 md:px-6 xl:grid-cols-2 xl:w-[120rem] xl:mx-auto'>
-        <h1 className='font-tagline text-lg text-center text-white uppercase tracking-widest md:text-[2rem] md:text-left xl:text-[2.8rem]'>
+        <motion.h1
+          variants={leftFadeInVariant}
+          initial='hidden'
+          animate='unhidden'
+          className='font-tagline text-lg text-center text-white uppercase tracking-widest md:text-[2rem] md:text-left xl:text-[2.8rem]'
+        >
           <span className='mr-2 font-bold text-gray'>01</span>
           Pick your destination
-        </h1>
+        </motion.h1>
 
-        <img
+        <motion.img
+          variants={rightFadeInVariant}
+          initial='hidden'
+          animate='unhidden'
           src={currDestination.images.webp}
           alt={currDestination.name}
           className='w-[17rem] h-[17rem] mx-auto md:w-[30rem] md:h-[30rem] xl:col-start-1 xl:w-[45rem] xl:h-[45rem] xl:self-center'
         />
 
-        <section className='w-[30rem] mx-auto grid gap-4 md:w-[57.5rem] md:grid-cols-2 xl:col-start-2 xl:w-[45rem]'>
+        <motion.section
+          variants={rightFadeInVariant}
+          initial='hidden'
+          animate='unhidden'
+          className='w-[30rem] mx-auto grid gap-4 md:w-[57.5rem] md:grid-cols-2 xl:col-start-2 xl:w-[45rem]'
+        >
           <ul className='flex justify-center gap-4 md:col-span-full xl:justify-start'>
             <li
               className={`py-2 font-tagline ${
@@ -110,7 +145,7 @@ const Destination = () => {
               {currDestination.travel}
             </span>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
