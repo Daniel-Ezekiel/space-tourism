@@ -9,7 +9,7 @@ const topTextFadeInVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.75,
     },
   },
   hidden: { opacity: 0, y: "-15rem" },
@@ -20,7 +20,7 @@ const buttonFadeInVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.8,
+      delay: 0.85,
     },
   },
   hidden: { opacity: 0, y: "2rem" },
