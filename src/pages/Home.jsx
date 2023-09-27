@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import bgDesktop from "/assets/home/background-home-desktop.jpg";
@@ -53,15 +54,15 @@ const Home = () => {
           experience!
         </motion.p>
 
-        <motion.button
+        <motion.div
           variants={buttonFadeInVariant}
           initial='hidden'
           whileInView='unhidden'
           type='button'
           className='box-content grid place-items-center content-box w-[15rem] h-[15rem] bg-white rounded-full font-display uppercase text-[2rem] text-dark hover:border-[6rem] hover:border-dark transition-all  duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out md:text-[3.2rem] md:w-[23rem] md:h-[23rem]'
         >
-          Explore
-        </motion.button>
+          <Link to='/destination'>Explore</Link>
+        </motion.div>
       </main>
     </div>
   );
