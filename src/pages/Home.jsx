@@ -54,15 +54,17 @@ const Home = () => {
           experience!
         </motion.p>
 
-        <motion.div
-          variants={buttonFadeInVariant}
-          initial='hidden'
-          whileInView='unhidden'
-          type='button'
-          className='box-content grid place-items-center content-box w-[15rem] h-[15rem] bg-white rounded-full font-display uppercase text-[2rem] text-dark hover:border-[6rem] hover:border-dark transition-all  duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out md:text-[3.2rem] md:w-[23rem] md:h-[23rem]'
-        >
-          <Link to='/destination'>Explore</Link>
-        </motion.div>
+        <Link to='/destination'>
+          <motion.div
+            variants={buttonFadeInVariant}
+            initial='hidden'
+            whileInView='unhidden'
+            type='button'
+            className='box-content grid place-items-center content-box w-[15rem] h-[15rem] bg-white rounded-full font-display uppercase text-[2rem] text-dark hover:border-[6rem] hover:border-dark transition-all  duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out md:text-[3.2rem] md:w-[23rem] md:h-[23rem]'
+          >
+            Explore
+          </motion.div>
+        </Link>
       </main>
     </div>
   );
