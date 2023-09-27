@@ -29,13 +29,13 @@ const Technology = () => {
       <div className='p-4 md:pr-[0]'>
         <Header />
       </div>
-      <main className='py-4 grid gap-8 md:mt-10 xl:grid-cols-2 md:pb-[0] xl:w-[120rem] xl:mx-auto xl:mr-[0]'>
+      <main className='py-4 grid gap-8 md:mt-10 xl:grid-cols-2 md:pb-[0] xl:w-[120rem] xl:mx-auto xl:max-2xl:mr-[0]'>
         <h1 className='font-tagline text-lg text-center text-white uppercase tracking-widest md:px-6 md:text-[2rem] md:text-left xl:col-span-full xl:text-[2.8rem]'>
           <span className='mr-2 font-bold text-gray'>03</span>
           Space Launch 101
         </h1>
 
-        <div className='xl:col-start-2 xl:w-[52rem] h-[53rem] ml-auto'>
+        <div className='xl:col-start-2 xl:w-[52rem] xl:h-[53rem] xl:max-2xl:ml-auto'>
           <img
             src={
               windowWidth >= 1280
@@ -43,7 +43,7 @@ const Technology = () => {
                 : currTechInfo.images.landscape
             }
             alt={currTechInfo.names}
-            className='w-full h-full object-cover mx-auto'
+            className='w-full h-full object-contain mx-auto'
           />
         </div>
 
